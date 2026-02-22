@@ -11,12 +11,18 @@ word = random.choice(wordslist)
 
 #     The computer choose a random word and mark stars for each letter of each word.
 word_guess = ('*'*len(word))
+guessed_letters = []
 while True:
     print('Your word guess:')
     print(word_guess)
+    
     letter_guess = input('Guess a letter:')
+
     if letter_guess in word:
-        
+        for index, letter in enumerate(word):
+            if letter_guess == letter:
+                word_guess[index] = letter
+
 #     Then the player will guess a letter.
 #         If that letter is in the word(s) then the computer fills the letter in all the correct positions of the word.
 #         If the letter isn’t in the word(s) then add a body part to the gallows (head, body, left arm, right arm, left leg, right leg).

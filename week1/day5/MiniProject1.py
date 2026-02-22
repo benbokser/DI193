@@ -91,7 +91,7 @@ def play():
     current_player = 'X'
     while True:
         display_board(board)
-        print
+        #print
         player_input(current_player)
         display_board(board)
         if check_win(board, current_player):
