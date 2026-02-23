@@ -4,25 +4,7 @@
 
 # Step 1: Import the Dog Class
 #     In a new Python file, import the Dog class from the previous exercise.
-class Dog:
-    def __init__(self, name: str, age: int, weight: float):
-        self.name = name
-        self.age = age
-        self.weight = weight
-
-    def bark(self):
-       return f'{self.name} is barking.'  
-
-    def run_speed(self):
-        return (self.weight / self.age)*10
-    
-    def fight(self, other_dog):
-        if self.run_speed()*self.weight > other_dog.run_speed()*other_dog.weight:
-            return(f'{self.name} wins!')
-        elif self.run_speed()*self.weight < other_dog.run_speed()*other_dog.weight:
-            return(f'{other_dog.name} wins!')
-        elif self.run_speed()*self.weight == other_dog.run_speed()*other_dog.weight:
-            return(f"It's a draw!")
+from Ex2 import Dog
 
 # Step 2: Create the PetDog Class
 
