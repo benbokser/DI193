@@ -1,0 +1,68 @@
+# 🌟 Exercise 1 — Random Sentence Generator
+
+
+# Step 1: Create the get_words_from_file function
+
+#     Create a function named get_words_from_file that takes the file path as an argument.
+#     Open the file in read mode ("r").
+#     Read the file content.
+#     Split the content into a list of words.
+#     Return the list of words.
+
+
+import random
+
+def get_words_from_file(file_path):
+    with open(file_path, "r") as f:
+        content = f.read()
+# content is ONE big string - split it into words
+    return content.split()
+
+# Step 2: Create the get_random_sentence function
+
+#     Create a function named get_random_sentence that takes the sentence length as an argument.
+#     Call get_words_from_file to get the list of words.
+#     Select a random word from the list length times.
+#     Create a sentence with the selected words.
+#     Convert the sentence to lowercase.
+#     Return the sentence.
+
+
+def get_random_sentence(length):
+# pick random words, join, return lowercase
+    word_list = get_words_from_file('words.txt')
+    random_list = [random.choice(word_list) for _ in range(length)]
+    random_string = ' '.join(random_list).lower()
+    return random_string
+
+# Step 3: Create the main function
+
+#     Create a function named main.
+#     Print a message explaining the program’s purpose.
+#     Ask the user for the desired sentence length.
+#     Validate the user input:
+#         Check if it is an integer.
+#         Check if it is between 2 and 20 (inclusive).
+#     If the input is invalid, print an error message and exit.
+#     If the input is valid, call get_random_sentence with the length and print the generated sentence.
+
+def main():
+    print('This program generates a sentence of random words of user-selected length.')
+      # get input, validate, generate sentence
+    try:
+        number = int(input('Enter sentence length(2-20):'))
+        print(f"You entered: {number}")
+    except ValueError:
+        print(f"'Invalid input. Please enter a number.")
+        return
+    if not 2 <= number <= 20:
+        print(f'Please enter a number between 2 and 20.')
+        return
+    
+    sentence = get_random_sentence(number)
+    print(f'Generated sentence: {sentence}')
+
+if __name__ == '__main__':
+    main()
+
+
