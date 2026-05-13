@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Enhanced Page</title>
+</head>
+<body>
+    <h1 id="dynamicHeading">Welcome to My JavaScript Enhanced Page</h1>
+    <p>This paragraph's content might change.</p>
+    <button onclick="changeText()">Click to Change Heading</button>
+
+    <script>
+        // Function to change the heading text
+        function changeText() {
+            document.getElementById('dynamicHeading').innerText = 'The Heading Has Changed!';
+        }
+
+        // Change paragraph text on page load
+        window.onload = function() {
+            document.querySelector('p').innerText = 'This paragraph was changed by JavaScript on page load!';
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables and Data Types</title>
+</head>
+<body>
+    <h1>Exploring JavaScript Variables and Data Types</h1>
+    <p>Open the browser's developer console (usually F12 or right-click > Inspect Element) to see the output.</p>
+
+    <script>
+        // Declare variables of different data types
+        let myString = "Hello, JavaScript!"; // String
+        let myNumber = 42;                  // Number
+        let myBoolean = true;               // Boolean
+        let myUndefined;                    // Undefined
+        let myNull = null;                  // Null
+        let myObject = { name: "John", age: 30 }; // Object
+        let myArray = [1, 2, 3];            // Array (which is also an object)
+        let mySymbol = Symbol('unique');    // Symbol (ES6)
+        let myFunction = function() { return "I am a function"; }; // Function
+
+        // Log each variable and its type to the console
+        console.log("myString:", myString, typeof myString);
+        console.log("myNumber:", myNumber, typeof myNumber);
+        console.log("myBoolean:", myBoolean, typeof myBoolean);
+        console.log("myUndefined:", myUndefined, typeof myUndefined);
+        console.log("myNull:", myNull, typeof myNull); // Note: typeof null is 'object'
+        console.log("myObject:", myObject, typeof myObject);
+        console.log("myArray:", myArray, typeof myArray);
+        console.log("mySymbol:", mySymbol, typeof mySymbol);
+        console.log("myFunction:", myFunction, typeof myFunction);
+    </script>
+</body>
+</html>
